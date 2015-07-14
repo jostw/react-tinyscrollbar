@@ -20,6 +20,9 @@
     "url": "https://github.com/jostw/react-tinyscrollbar/issues"
   },
   "homepage": "https://github.com/jostw/react-tinyscrollbar",
+  "devDependencies": {
+    "jquery": "^2.1.4"
+  },
   "dependencies": {
     "tinyscrollbar": "^2.4.2"
   }
