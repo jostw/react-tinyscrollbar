@@ -2,7 +2,7 @@
   "name": "react-tinyscrollbar",
   "version": "0.0.1",
   "description": "Tinyscrollbar component for React.",
-  "main": "ReactTinyScrollbar.js",
+  "main": "ReactTinyscrollbar.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/jostw/react-tinyscrollbar/issues"
   },
-  "homepage": "https://github.com/jostw/react-tinyscrollbar"
+  "homepage": "https://github.com/jostw/react-tinyscrollbar",
+  "dependencies": {
+    "tinyscrollbar": "^2.4.2"
+  }
 }
