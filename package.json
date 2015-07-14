@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/jostw/react-tinyscrollbar",
   "devDependencies": {
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "react": "^0.13.3"
   },
   "dependencies": {
     "tinyscrollbar": "^2.4.2"
