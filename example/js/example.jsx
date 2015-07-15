@@ -9,8 +9,8 @@
 
 "use strict";
 
-var React = require("react");
-var ReactTinyscrollbar = require("../../src/ReactTinyscrollbar.jsx");
+import React from "react";
+import ReactTinyscrollbar from "../../src/ReactTinyscrollbar.jsx";
 
 class Example extends React.Component {
     constructor(props) {
@@ -22,12 +22,10 @@ class Example extends React.Component {
     }
 
     render() {
-        var lines = [];
+        let lines = [];
 
         for (let i = 0; i < this.state.count; i++) {
-            lines.push(
-                <div key={ i } style={{ margin: "1em 0", padding: ".5em", opacity: "0.5", backgroundColor: "white" }}>{ i + 1 }</div>
-            );
+            lines.push(<div key={ i } style={{ margin: "1em 0", padding: ".5em", opacity: "0.5", backgroundColor: "white" }}>{ i + 1 }</div>);
         }
 
         return (
@@ -50,6 +48,5 @@ class Example extends React.Component {
         this.setState({ count: React.findDOMNode(this.refs.input).value });
     }
 }
-
 
 React.render(<Example />, document.getElementById("app"));
