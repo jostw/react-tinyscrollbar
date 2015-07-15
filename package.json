@@ -1,8 +1,8 @@
 {
   "name": "react-tinyscrollbar",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Tinyscrollbar component for React.",
-  "main": "ReactTinyscrollbar.js",
+  "main": "./dist/ReactTinyscrollbar.js",
   "scripts": {
     "pretest": "npm install",
     "jshint": "jshint webpack.config.js",
