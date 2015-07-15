@@ -11,6 +11,7 @@
 
 import React from "react";
 import $ from "jquery";
+
 import "tinyscrollbar";
 
 class ReactTinyscrollbar extends React.Component {
@@ -78,7 +79,7 @@ class ReactTinyscrollbar extends React.Component {
 
     componentDidUpdate() {
         if (this.state.hasInit) {
-            let $tinyscrollbar = $(React.findDOMNode(this.refs.tinyscrollbar));
+            let $tinyscrollbar = $(React.findDOMNode(this.refs.tinyscrollbar)); // jshint ignore:line
             let tinyscrollbar = $tinyscrollbar.data("plugin_tinyscrollbar");
 
             if (tinyscrollbar) {

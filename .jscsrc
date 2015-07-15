@@ -1,7 +1,12 @@
 {
-    "preset"                            : "google",
-    "validateIndentation"               : 4,
-    "validateQuoteMarks"                : "\"",
-    "maximumLineLength"                 : 150,
-    "disallowSpacesInsideObjectBrackets": null
+    "preset"                                        : "google",
+    "validateIndentation"                           : 4,
+    "validateQuoteMarks"                            : "\"",
+    "maximumLineLength"                             : 700,
+    "disallowSpacesInsideObjectBrackets"            : null,
+
+    "disallowSpacesInAnonymousFunctionExpression"   : null,
+    "requireCurlyBraces"                            : null,
+    "disallowMultipleVarDecl"                       : null,
+    "requireLineFeedAtFileEnd"                      : null
 }
