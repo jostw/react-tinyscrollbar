@@ -18,8 +18,6 @@ class ReactTinyscrollbar extends React.Component {
         super(props);
 
         this.state = {
-            hasScrollbar: true,
-
             style: {
                 tinyscrollbar: {
                     position        : "relative",
@@ -71,43 +69,38 @@ class ReactTinyscrollbar extends React.Component {
     }
 
     componentWillReceiveProps() {
-        this.setState({ hasScrollbar: true });
+        this.setState({ hasInit: false });
     }
 
     componentDidMount() {
-        this.setState({ hasScrollbar: true });
+        this.setState({ hasInit: false });
     }
 
     componentDidUpdate() {
-        if (this.state.hasScrollbar) {
-            let overview = React.findDOMNode(this.refs.overview);
+        if (this.state.hasInit) {
+            let $scrollbar = $(React.findDOMNode(this.refs.tinyscrollbar));
+            let tinyscrollbar = $scrollbar.data("plugin_tinyscrollbar");
 
-            if (overview.offsetHeight <= this.props.height) {
-                this.setState({ hasScrollbar: false });
+            if (tinyscrollbar) {
+                tinyscrollbar.update("relative");
+            } else {
+                $scrollbar.tinyscrollbar();
             }
-        }
-
-        let $scrollbar = $(React.findDOMNode(this.refs.tinyscrollbar));
-        let tinyscrollbar = $scrollbar.data("plugin_tinyscrollbar");
-
-        if (tinyscrollbar) {
-            tinyscrollbar.update("relative");
         } else {
-            $scrollbar.tinyscrollbar();
+            let overview = React.findDOMNode(this.refs.overview);
+            let hasScrollbar = overview.offsetHeight > this.props.height;
+
+            let style = this.state.style;
+
+            style.tinyscrollbar.height = hasScrollbar ? this.props.height : "auto";
+            style.overview.position = hasScrollbar ? "absolute" : "relative";
+            style.scrollbar.display = hasScrollbar ? "block" : "none";
+
+            this.setState({ hasInit: true, style: style });
         }
     }
 
     render() {
-        if (this.state.hasScrollbar) {
-            this.state.style.tinyscrollbar.height = this.props.height;
-            this.state.style.overview.position = "absolute";
-            this.state.style.scrollbar.display = "block";
-        } else {
-            this.state.style.tinyscrollbar.height = "auto !important";
-            this.state.style.overview.position = "relative";
-            this.state.style.scrollbar.display = "none";
-        }
-
         return (
             <div className="tinyscrollbar" ref="tinyscrollbar" style={ this.state.style.tinyscrollbar }>
                 <div className="viewport" style={ this.state.style.viewport }>
