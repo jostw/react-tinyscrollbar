@@ -10,6 +10,7 @@
 "use strict";
 
 var path = require("path");
+var webpack = require("webpack");
 
 var isDev = process.argv[1].match("webpack-dev-server");
 
@@ -24,6 +25,7 @@ module.exports = {
             ];
         } else {
             entry.ReactTinyscrollbar = path.resolve(__dirname, "src/ReactTinyscrollbar.jsx");
+            entry.vendor = ["react", "jquery"];
         }
 
         return entry;
@@ -38,6 +40,10 @@ module.exports = {
             }
         ]
     },
+
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js")
+    ],
 
     devServer: {
         contentBase: "example/"
