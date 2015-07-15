@@ -41,9 +41,15 @@ module.exports = {
         ]
     },
 
-    plugins: [
-        new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js")
-    ],
+    plugins: (function() {
+        var plugins = [];
+
+        if (!isDev) {
+            plugins.push(new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js"));
+        }
+
+        return plugins;
+    })(),
 
     devServer: {
         contentBase: "example/"
