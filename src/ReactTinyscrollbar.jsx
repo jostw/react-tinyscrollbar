@@ -78,13 +78,13 @@ class ReactTinyscrollbar extends React.Component {
 
     componentDidUpdate() {
         if (this.state.hasInit) {
-            let $scrollbar = $(React.findDOMNode(this.refs.tinyscrollbar));
-            let tinyscrollbar = $scrollbar.data("plugin_tinyscrollbar");
+            let $tinyscrollbar = $(React.findDOMNode(this.refs.tinyscrollbar));
+            let tinyscrollbar = $tinyscrollbar.data("plugin_tinyscrollbar");
 
             if (tinyscrollbar) {
                 tinyscrollbar.update("relative");
             } else {
-                $scrollbar.tinyscrollbar();
+                $tinyscrollbar.tinyscrollbar();
             }
         } else {
             let overview = React.findDOMNode(this.refs.overview);
