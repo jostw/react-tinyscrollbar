@@ -40,8 +40,7 @@ module.exports = {
     },
 
     devServer: {
-        contentBase: "example/",
-        noInfo: true
+        contentBase: "example/"
     },
 
     output: {
