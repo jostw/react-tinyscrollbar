@@ -1,6 +1,11 @@
 {
-    "node"  : true,
+    "browser"   : true,
+    "node"      : true,
 
-    "proto" : true,
-    "shadow": true
+    "proto"     : true,
+    "shadow"    : true,
+
+    "globals"   : {
+        "parent": true
+    }
 }

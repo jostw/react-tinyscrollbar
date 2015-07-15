@@ -10,7 +10,7 @@
 "use strict";
 
 import React from "react";
-import ReactTinyscrollbar from "../../src/ReactTinyscrollbar.jsx";
+import ReactTinyscrollbar from "../../dist/ReactTinyscrollbar";
 
 class Example extends React.Component {
     constructor(props) {

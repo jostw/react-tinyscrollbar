@@ -10,7 +10,6 @@
 "use strict";
 
 var path = require("path");
-var webpack = require("webpack");
 
 var isDev = process.argv[1].match("webpack-dev-server");
 
@@ -25,7 +24,6 @@ module.exports = {
             ];
         } else {
             entry.ReactTinyscrollbar = path.resolve(__dirname, "src/ReactTinyscrollbar.jsx");
-            entry.vendor = ["react", "jquery"];
         }
 
         return entry;
@@ -34,29 +32,35 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.jsx?$/,
+                test: /\.jsx$/,
                 exclude: /node_modules/,
                 loader: "jscs!eslint!jshint!babel"
             }
         ]
     },
 
-    plugins: (function() {
-        var plugins = [];
-
-        if (!isDev) {
-            plugins.push(new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js"));
-        }
-
-        return plugins;
-    })(),
-
     devServer: {
         contentBase: "example/"
     },
 
     output: {
+        library: "ReactTinyscrollbar",
+        libraryTarget: "umd",
+
         path: path.resolve(__dirname, "dist"),
         filename: "[name].js"
-    }
+    },
+
+    externals: (function() {
+        var externals = {};
+
+        if (!isDev) {
+            externals = {
+                "react": "react",
+                "jquery": "jquery"
+            };
+        }
+
+        return externals;
+    })()
 };
