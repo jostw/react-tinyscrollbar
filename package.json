@@ -1,6 +1,6 @@
 {
   "name": "react-tinyscrollbar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tinyscrollbar component for React.",
   "main": "./dist/ReactTinyscrollbar.js",
   "scripts": {
