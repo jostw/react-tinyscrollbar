@@ -1,4 +1,8 @@
-node_modules/
-npm-debug.log
+.editorconfig
+.eslintrc
+.jscsrc
+.jshintrc
+.npmignore
 
 example/
+webpack.config.js
