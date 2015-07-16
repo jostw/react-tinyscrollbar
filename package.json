@@ -1,6 +1,6 @@
 {
   "name": "react-tinyscrollbar",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Tinyscrollbar component for React.",
   "main": "./dist/ReactTinyscrollbar.js",
   "scripts": {
@@ -31,17 +31,17 @@
     "babel-loader": "^5.3.1",
     "eslint": "^0.24.1",
     "eslint-loader": "^0.14.1",
-    "jquery": "^2.1.4",
     "jscs": "^1.13.1",
     "jscs-loader": "^0.1.0",
     "jshint": "^2.8.0",
     "jshint-loader": "^0.8.3",
     "node-libs-browser": "^0.5.2",
-    "react": "^0.13.3",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
+    "jquery": "^2.1.4",
+    "react": "^0.13.3",
     "tinyscrollbar": "^2.4.2"
   }
 }
