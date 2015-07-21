@@ -56,7 +56,7 @@ React.render(<Example />, document.getElementById("example"));
 
 1. Wrap the component with React Tinyscrollbar.
 2. Scrollbar appears when the content exceed the given height prop. Otherwise, the content remains its own height.
-3. Since Tinyscrollbar depends on [jQuery](http://jquery.com/), make sure it is included before using React Tinyscrollbar.
+3. Since Tinyscrollbar depends on jQuery, make sure it is included before using React Tinyscrollbar.
 
 ## Development
 
