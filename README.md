@@ -2,6 +2,18 @@
 
 A React component of [Tinyscrollbar](http://baijs.com/tinyscrollbar/).
 
+## Overview
+
+React Tinyscrollbar depends on [React](https://facebook.github.io/react/) and [jQuery](https://jquery.com/).
+
+## Getting Started
+
+Make sure [Node.js](https://nodejs.org/) is installed properly.
+
+```
+npm install react-tinyscrollbar --save-dev
+```
+
 ## Example
 
 For example, if you are building a React component as follows.
@@ -42,6 +54,19 @@ var Example = React.createClass({
 React.render(<Example />, document.getElementById("example"));
 ```
 
-- Wrap the component with React Tinyscrollbar.
-- Scrollbar appears when the content exceed the given height prop. Otherwise, the content remains its own height.
-- Since Tinyscrollbar depends on [jQuery](http://jquery.com/), make sure it is included before using React Tinyscrollbar.
+1. Wrap the component with React Tinyscrollbar.
+2. Scrollbar appears when the content exceed the given height prop. Otherwise, the content remains its own height.
+3. Since Tinyscrollbar depends on [jQuery](http://jquery.com/), make sure it is included before using React Tinyscrollbar.
+
+## Development
+
+- Use ` npm start ` for watching files and developing. Open ` http://localhost:8080 ` to see an example page.
+- Use ` npm run build ` for production.
+
+## Contribute
+
+Pull requests are welcome :)
+
+## License
+
+MIT
